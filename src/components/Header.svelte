@@ -1,5 +1,5 @@
 <script>
-    import { Link } from 'svelte-routing'
+    import { Link } from 'svelte-navigator'
     const site_name = import.meta.env.VITE_SITE_NAME
 </script>
 

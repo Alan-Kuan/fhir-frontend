@@ -576,7 +576,7 @@ __metadata:
     "@types/axios": ^0.14.0
     axios: ^0.27.2
     svelte: ^3.49.0
-    svelte-routing: ^1.6.0
+    svelte-navigator: ^3.2.2
     vite: ^3.0.0
   languageName: unknown
   linkType: soft
@@ -1380,18 +1380,18 @@ __metadata:
   languageName: node
   linkType: hard
 
-"svelte-routing@npm:^1.6.0":
-  version: 1.6.0
-  resolution: "svelte-routing@npm:1.6.0"
+"svelte-navigator@npm:^3.2.2":
+  version: 3.2.2
+  resolution: "svelte-navigator@npm:3.2.2"
   dependencies:
-    svelte2tsx: ^0.1.157
+    svelte2tsx: ^0.1.151
   peerDependencies:
-    svelte: ^3.20.x
-  checksum: 8c8668ad91e24eb3abfdf9676568b45a9258ee9e1097de2b3333e775a598e20c8bcaf55161ae7e881b4fe960fb165dd04cc86090da4b5a69a42edbfbcdcc5149
+    svelte: 3.x
+  checksum: 2f8892254fffc0cb9096704cb0ac3084cdbe90f5d96c7692e99c01dbda9eb5578ccc3911e5ddf51a5b42e70a0c65c637b272e14777b8dc8d8be3c1cc01c1e3c0
   languageName: node
   linkType: hard
 
-"svelte2tsx@npm:^0.1.157":
+"svelte2tsx@npm:^0.1.151":
   version: 0.1.193
   resolution: "svelte2tsx@npm:0.1.193"
   dependencies:

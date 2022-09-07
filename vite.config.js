@@ -5,6 +5,7 @@ import path from 'path'
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [svelte()],
+  optimizeDeps: { exclude: ['svelte-navigator'] },
   resolve: {
     alias: {
       $apis: path.resolve('./src/apis'),

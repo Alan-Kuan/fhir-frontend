@@ -1,5 +1,5 @@
 <script>
-    import { Router, Route } from 'svelte-routing'
+    import { Router, Route } from 'svelte-navigator'
     import HomeView from '$views/Home.svelte'
     import PatientView from '$views/Patient.svelte'
 
