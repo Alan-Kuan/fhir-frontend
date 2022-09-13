@@ -1,7 +1,3 @@
-<script>
-    export let data;
-</script>
-
 <div class="card">
     <div>
         <span>Name | </span>
@@ -16,6 +12,10 @@
         <span>{ data.resource.birthDate }</span>
     </div>
 </div>
+
+<script>
+    export let data;
+</script>
 
 <style>
     .card {

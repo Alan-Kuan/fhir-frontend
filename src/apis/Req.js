@@ -7,4 +7,8 @@ export default axios.create({
     headers: {
         'Content-Type': 'application/fhir+json',
     },
+    auth: {
+        username: localStorage.getItem('account'),
+        password: localStorage.getItem('password')
+    }
 })

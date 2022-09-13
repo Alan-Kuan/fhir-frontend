@@ -1,9 +1,4 @@
-<script>
-    import PatientCard from '$components/PatientCard.svelte'
-    import { getPatients } from '$apis/Patient'
-</script>
-
-<main>
+<div>
     {#await getPatients()}
         <p>Waiting...</p>
     {:then patients} 
@@ -13,4 +8,9 @@
     {:catch err}
         <p>Error: { err.message }</p>
     {/await}
-</main>
+</div>
+
+<script>
+    import PatientCard from '$components/PatientCard.svelte'
+    import { getPatients } from '$apis/Patient'
+</script>
