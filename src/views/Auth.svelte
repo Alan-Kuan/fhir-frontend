@@ -1,6 +1,6 @@
 <main>
     <h2>Authentication Config</h2>
-    <form on:submit={onSubmit}>
+    <form on:submit|preventDefault={onSubmit}>
         <div class="row">
             <span>帳號</span>
             <input type="text" bind:value={account} />
