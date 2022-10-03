@@ -25,6 +25,7 @@
         margin: 0 1rem;
         border: 1px solid darkgray;
         border-radius: 10px;
+        background-color: #b3e2ff;
         text-align: center;
         transition: background-color 1s;
     }
