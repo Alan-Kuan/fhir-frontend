@@ -1,4 +1,4 @@
-<Card>
+<BaseCard icon="mdi:patient">
     <CardItem
         label="ID"
         value={ data.id }
@@ -15,10 +15,10 @@
         label="Birth Date"
         value={ data.birthDate ?? 'Unknown' }
     />
-</Card>
+</BaseCard>
 
 <script>
-    import Card from '$components/UI/Card.svelte'
+    import BaseCard from '$components/ResourceCard/BaseCard.svelte'
     import CardItem from '$components/UI/CardItem.svelte'
 
     export let data

@@ -1,4 +1,4 @@
-<Card>
+<BaseCard icon="fa-solid:procedures">
     <CardItem
         label="ID"
         value={ data.id }
@@ -29,10 +29,10 @@
         {/each}
     </CardList>
     {/if}
-</Card>
+</BaseCard>
 
 <script>
-    import Card from '$components/UI/Card.svelte'
+    import BaseCard from '$components/ResourceCard/BaseCard.svelte'
     import CardItem from '$components/UI/CardItem.svelte'
     import CardList from '$components/UI/CardList.svelte'
 

@@ -1,4 +1,4 @@
-<Card>
+<BaseCard icon="healthicons:coronary-care-unit">
     <CardItem
         label="ID"
         value={ data.id }
@@ -21,10 +21,10 @@
         label="Subject"
         value={ data.subject.reference }
     />
-</Card>
+</BaseCard>
 
 <script>
-    import Card from '$components/UI/Card.svelte'
+    import BaseCard from '$components/ResourceCard/BaseCard.svelte'
     import CardItem from '$components/UI/CardItem.svelte'
 
     export let data

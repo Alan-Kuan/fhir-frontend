@@ -1,4 +1,4 @@
-<Card>
+<BaseCard icon="carbon:person">
     <CardItem
         label="ID"
         value={ data.id }
@@ -29,10 +29,10 @@
         label="Related Patient"
         value={ data.patient.reference }
     />
-</Card>
+</BaseCard>
 
 <script>
-    import Card from '$components/UI/Card.svelte'
+    import BaseCard from '$components/ResourceCard/BaseCard.svelte'
     import CardItem from '$components/UI/CardItem.svelte'
     import CardList from '$components/UI/CardList.svelte'
 

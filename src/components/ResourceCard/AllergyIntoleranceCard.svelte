@@ -1,4 +1,4 @@
-<Card>
+<BaseCard icon="mdi:flower-pollen-outline">
     <CardItem
         label="ID"
         value={data.id}
@@ -40,10 +40,10 @@
         <div>{note.text}</div>
         {/each}
     </CardList>
-</Card>
+</BaseCard>
 
 <script>
-    import Card from '$components/UI/Card.svelte'
+    import BaseCard from '$components/ResourceCard/BaseCard.svelte'
     import CardItem from '$components/UI/CardItem.svelte'
     import CardList from '$components/UI/CardList.svelte'
 
