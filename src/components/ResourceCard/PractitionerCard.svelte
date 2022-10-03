@@ -1,20 +1,25 @@
-<BaseCard icon="fa6-solid:user-doctor">
-    <CardItem
-        label="ID"
-        value={data.id}
-    />
-    <CardItem
-        label="Name"
-        value={name}
-    />
-    <CardList label="Qualification">
-        {#each data.qualification as qualification}
+<BaseCard
+    data={data}
+    icon="fa6-solid:user-doctor"
+>
+    <div slot="content">
         <CardItem
-            label={qualification.issuer.display}
-            value={`${qualification.code.text} (${qualification.period.start})`}
+            label="ID"
+            value={data.id}
         />
-        {/each}
-    </CardList>
+        <CardItem
+            label="Name"
+            value={name}
+        />
+        <CardList label="Qualification">
+            {#each data.qualification as qualification}
+            <CardItem
+                label={qualification.issuer.display}
+                value={`${qualification.code.text} (${qualification.period.start})`}
+            />
+            {/each}
+        </CardList>
+    </div>
 </BaseCard>
 
 <script>

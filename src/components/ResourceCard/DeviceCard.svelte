@@ -1,22 +1,27 @@
-<BaseCard icon="akar-icons:laptop-device">
-    <CardItem
-        label="ID"
-        value={ data.id }
-    />
-    {#if data.identifier }
-    <CardList label="Identifier">
-        {#each data.identifier as ident }
+<BaseCard
+    data={data}
+    icon="akar-icons:laptop-device"
+>
+    <div slot="content">
         <CardItem
-            label={ ident.system }
-            value={ ident.value }
+            label="ID"
+            value={ data.id }
         />
-        {/each}
-    </CardList>
-    {/if}
-    <CardItem
-        label="Patient"
-        value={ data.patient.reference }
-    />
+        {#if data.identifier }
+        <CardList label="Identifier">
+            {#each data.identifier as ident }
+            <CardItem
+                label={ ident.system }
+                value={ ident.value }
+            />
+            {/each}
+        </CardList>
+        {/if}
+        <CardItem
+            label="Patient"
+            value={ data.patient.reference }
+        />
+    </div>
 </BaseCard>
 
 <script>

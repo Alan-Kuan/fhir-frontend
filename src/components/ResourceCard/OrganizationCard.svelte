@@ -1,20 +1,25 @@
-<BaseCard icon="clarity:organization-line">
-    <CardItem
-        label="ID"
-        value={data.id}
-    />
-    <CardItem
-        label="Name"
-        value={data.name}
-    />
-    <CardList label="Telecom">
-        {#each data.telecom as telecom}
+<BaseCard
+    data={data}
+    icon="clarity:organization-line"
+>
+    <div slot="content">
         <CardItem
-            label={telecom.system}
-            value={telecom.value}
+            label="ID"
+            value={data.id}
         />
-        {/each}
-    </CardList>
+        <CardItem
+            label="Name"
+            value={data.name}
+        />
+        <CardList label="Telecom">
+            {#each data.telecom as telecom}
+            <CardItem
+                label={telecom.system}
+                value={telecom.value}
+            />
+            {/each}
+        </CardList>
+    </div>
 </BaseCard>
 
 <script>

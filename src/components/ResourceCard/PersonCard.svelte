@@ -1,34 +1,39 @@
-<BaseCard icon="carbon:person">
-    <CardItem
-        label="ID"
-        value={ data.id }
-    />
-    <CardItem
-        label="Name"
-        value={ data.name ? (data.name[0].text ?? 'Unknown') : 'Unknown' }
-    />
-    <CardItem
-        label="Gender"
-        value={ data.gender ?? 'Unknown' }
-    />
-    <CardItem
-        label="Relationship"
-        value={ data.relationship ? (data.relationship[0].text ?? 'Unknown') : 'Unknown' }
-    />
-    {#if data.telecom }
-    <CardList label="Contact Method">
-        {#each data.telecom as telecom }
+<BaseCard
+    data={data}
+    icon="carbon:person"
+>
+    <div slot="content">
         <CardItem
-            label={ telecom.system ? `${telecom.system} (${telecom.use})` : 'Unknown System' }
-            value={ telecom.value ?? 'Unknown' }
+            label="ID"
+            value={ data.id }
         />
-        {/each}
-    </CardList>
-    {/if}
-    <CardItem
-        label="Related Patient"
-        value={ data.patient.reference }
-    />
+        <CardItem
+            label="Name"
+            value={ data.name ? (data.name[0].text ?? 'Unknown') : 'Unknown' }
+        />
+        <CardItem
+            label="Gender"
+            value={ data.gender ?? 'Unknown' }
+        />
+        <CardItem
+            label="Relationship"
+            value={ data.relationship ? (data.relationship[0].text ?? 'Unknown') : 'Unknown' }
+        />
+        {#if data.telecom }
+        <CardList label="Contact Method">
+            {#each data.telecom as telecom }
+            <CardItem
+                label={ telecom.system ? `${telecom.system} (${telecom.use})` : 'Unknown System' }
+                value={ telecom.value ?? 'Unknown' }
+            />
+            {/each}
+        </CardList>
+        {/if}
+        <CardItem
+            label="Related Patient"
+            value={ data.patient.reference }
+        />
+    </div>
 </BaseCard>
 
 <script>
