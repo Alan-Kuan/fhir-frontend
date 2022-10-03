@@ -23,21 +23,23 @@
         width: 15rem;
         height: 10rem;
         margin: 0 1rem;
-        border: 1px solid white;
+        border: 1px solid darkgray;
         border-radius: 10px;
         text-align: center;
         transition: background-color 1s;
     }
     .block :global(.icon) {
         font-size: 6rem;
-        transition: color 1s;
+        color: #555555;
+        transition: color .5s;
     }
     .block .title {
         font-weight: bold;
-        transition: color 1s;
+        color: #555555;
+        transition: color .5s;
     }
     .block:hover {
-        background: white;
+        background: var(--site-main-color);
     }
     .block:hover :global(.icon),
     .block:hover .title {

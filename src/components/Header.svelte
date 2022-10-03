@@ -1,7 +1,10 @@
 {#if is_home}
-    <h1 class="home_title">{ site_name }</h1>
+    <header class="home">
+        <h1>{ site_name }</h1>
+        <div class="underline"></div>
+    </header>
 {:else}
-    <header>
+    <header class="other">
         <Link to="/">
             <h1>{ site_name }</h1>
         </Link>
@@ -16,25 +19,31 @@
 </script>
 
 <style>
-    h1 {
-        color: white;
-    }
-    .home_title {
-        margin-top: 5rem;
+    header.home h1 {
+        padding-top: 5rem;
         text-align: center;
         font-size: 6rem;
+        color: black;
+    }
+    header.home .underline {
+        width: 75%;
+        margin: 0 auto;
+        border-bottom: 1rem solid var(--site-main-color);
     }
 
-    header {
+    header.other {
         display: flex;
         align-items: center;
         width: 100%;
         height: 10rem;
         padding: 2rem;
         box-sizing: border-box;
-        background: #323232;
+        background: var(--site-main-color);
     }
-    header :global(a) {
+    header.other :global(a) {
         text-decoration: none;
+    }
+    header.other h1 {
+        color: white;
     }
 </style>

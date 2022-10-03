@@ -9,7 +9,6 @@
         align-items: flex-start;
         padding: 1rem;
         margin-bottom: 1rem;
-        border: 1px solid white;
-        border-radius: 10px;
+        box-shadow: 1px 1px 5px gray;
     }
 </style>

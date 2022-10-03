@@ -18,12 +18,6 @@
 </script>
 
 <style>
-    select {
-    padding: 0.5rem 1rem;
-    border-radius: 15px;
-    appearance: none;
-    }
-
     .wrapper {
         display: inline-block;
         position: relative;
@@ -34,5 +28,16 @@
         top: 50%;
         right: 0.5rem;
         transform: translateY(-50%);
+        cursor: pointer;
+    }
+
+    .wrapper:hover select {
+        background-color: #c2c2c2;
+    }
+    select {
+        padding: 0.5rem 1rem;
+        border-radius: 15px;
+        appearance: none;
+        cursor: pointer;
     }
 </style>
