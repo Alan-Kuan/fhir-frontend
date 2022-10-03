@@ -22,6 +22,7 @@
     function onSubmit() {
         localStorage.setItem('account', account)
         localStorage.setItem('password', password)
+        location.reload()
         alert('已儲存帳號密碼！')
     }
 </script>

@@ -5,7 +5,4 @@ export async function getResources(type) {
         .then(res => {
             return res.data.entry
         })
-        .catch(() => {
-            return []
-        })
 }
