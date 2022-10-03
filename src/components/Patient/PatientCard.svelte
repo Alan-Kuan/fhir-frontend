@@ -1,5 +1,9 @@
 <Card>
     <CardItem
+        label="ID"
+        value={ data.id }
+    />
+    <CardItem
         label="Name"
         value={ data.name ? (data.name[0].text ?? 'Unknown') : 'Unknown' }
     />
