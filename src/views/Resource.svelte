@@ -13,30 +13,18 @@
     import Select from '$components/UI/Select.svelte'
     import { getResources } from '$apis/Resource'
 
-    $: resource_type = resources[selected].text
+    $: resource_type = resources[selected]
 
     let selected = 0
     let resources = [
-        {
-            "text": "Patient",
-            "value": 0
-        },
-        {
-            "text": "RelatedPerson",
-            "value": 1
-        },
-        {
-            "text": "CarePlan",
-            "value": 2
-        },
-        {
-            "text": "Procedure",
-            "value": 3
-        },
-        {
-            "text": "Device",
-            "value": 4
-        }
+        'Patient',
+        'RelatedPerson',
+        'Practitioner',
+        'Organization',
+        'CarePlan',
+        'Procedure',
+        'Device',
+        'AllergyIntolerance',
     ]
 </script>
 

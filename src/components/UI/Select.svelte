@@ -3,9 +3,9 @@
         bind:value={selected}
         style="width: {width};"
     >
-        {#each items as item}
-            <option value={item.value}>
-                {item.text}
+        {#each items as item, idx}
+            <option value={item.value ?? idx}>
+                {item.text ?? item}
             </option>
         {/each}
     </select>
