@@ -1,37 +1,33 @@
 <main>
     <h2>Patient Everything</h2>
+
     <form on:submit|preventDefault={onSubmit}>
         <span>Patient ID</span>
         <input type="text" bind:value={patient_id} />
         <button type="submit">Submit</button>
     </form>
-    <div class="list">
-        {#each resources as resource}
-        <svelte:component
-            this={getResourceCard(resource.resource.resourceType)}
-            data={resource.resource}
-        />
-        {/each}
-    </div>
+
+    {#if ready}
+    <ResourceList get_resources={get_resources} />
+    {/if}
 </main>
 
 <script>
+    import ResourceList from '$components/ResourceList.svelte'
     import { getPatientEverything } from '$apis/Resource'
-    import { getResourceCard } from '$apis/ResourceCard'
 
     let patient_id = ''
-    let resources = []
+    let ready = false
+    let get_resources
 
     function onSubmit() {
-        getPatientEverything(patient_id)
-            .then(res => {
-                resources = res
-            })
+        ready = true
+        get_resources = getPatientEverything(patient_id)
     }
 </script>
 
 <style>
-    .list {
-        margin-top: 2rem;
+    form {
+        margin-bottom: 2rem;
     }
 </style>

@@ -1,10 +1,10 @@
 <div>
-    {#await getResources(type)}
-        <p>Waiting...</p>
+    {#await get_resources}
+        <p>{waiting_msg}</p>
     {:then resources} 
         {#each resources as resource}
             <svelte:component
-                this={getResourceCard(type)}
+                this={getResourceCard(resource.resource.resourceType)}
                 data={resource.resource}
             />
         {/each}
@@ -14,8 +14,8 @@
 </div>
 
 <script>
-    import { getResources } from '$apis/Resource'
     import { getResourceCard } from '$apis/ResourceCard'
 
-    export let type;
+    export let get_resources
+    export let waiting_msg = 'Waiting...'
 </script>
