@@ -1,3 +1,4 @@
+import BaseCard from '$components/ResourceCard/BaseCard.svelte'
 import PatientCard from '$components/ResourceCard/PatientCard.svelte'
 import PersonCard from '$components/ResourceCard/PersonCard.svelte'
 import PractitionerCard from '$components/ResourceCard/PractitionerCard.svelte'
@@ -19,5 +20,5 @@ let components = {
 }
 
 export function getResourceCard(type) {
-    return components[type]
+    return components[type] ?? BaseCard
 }
