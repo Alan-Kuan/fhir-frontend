@@ -1,15 +1,15 @@
 <div class="card">
     <div>
         <span>Name | </span>
-        <span>{ data.resource.name[0].text }</span>
+        <span>{ data.name ? (data.name[0].text ?? 'Unknown') : 'Unknown' }</span>
     </div>
     <div>
         <span>Gender | </span>
-        <span>{ data.resource.gender }</span>
+        <span>{ data.gender ?? 'Unknown' }</span>
     </div>
     <div>
         <span>Birth Date | </span>
-        <span>{ data.resource.birthDate }</span>
+        <span>{ data.birthDate ?? 'Unknown' }</span>
     </div>
 </div>
 

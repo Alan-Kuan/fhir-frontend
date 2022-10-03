@@ -2,7 +2,7 @@
     <Header />
     <div class="content">
         <Route path="/" component={HomeView} />
-        <Route path="patient" component={PatientView} />
+        <Route path="resource" component={ResourceView} />
         <Route path="auth" component={AuthView} />
     </div>
 </Router>
@@ -11,7 +11,7 @@
     import { Router, Route } from 'svelte-navigator'
     import Header from '$components/Header.svelte'
     import HomeView from '$views/Home.svelte'
-    import PatientView from '$views/Patient.svelte'
+    import ResourceView from '$views/Resource.svelte'
     import AuthView from '$views/Auth.svelte'
 </script>
 

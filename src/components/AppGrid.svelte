@@ -13,9 +13,9 @@
 
     let entries = [
         {
-            path: 'patient',
-            icon: 'mdi:account-injury-outline',
-            title: 'Patient List',
+            path: 'resource',
+            icon: 'mdi:cube-outline',
+            title: 'Resources',
         },
         {
             path: 'auth',
