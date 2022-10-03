@@ -1,9 +1,9 @@
 <Router>
     <Header />
     <div class="content">
-        <Route path="/" component={HomeView} />
-        <Route path="resource" component={ResourceView} />
-        <Route path="auth" component={AuthView} />
+        {#each routes as route}
+        <Route path={route.path} component={route.component} />
+        {/each}
     </div>
 </Router>
 
@@ -12,7 +12,27 @@
     import Header from '$components/Header.svelte'
     import HomeView from '$views/Home.svelte'
     import ResourceView from '$views/Resource.svelte'
+    import PatientEverythingView from '$views/PatientEverything.svelte'
     import AuthView from '$views/Auth.svelte'
+
+    let routes = [
+      {
+        path: '/',
+        component: HomeView,
+      },
+      {
+        path: 'resource',
+        component: ResourceView,
+      },
+      {
+        path: 'patient-everything',
+        component: PatientEverythingView,
+      },
+      {
+        path: 'auth',
+        component: AuthView,
+      },
+    ]
 </script>
 
 <style>

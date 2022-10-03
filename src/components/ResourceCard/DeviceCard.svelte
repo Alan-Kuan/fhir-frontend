@@ -15,7 +15,7 @@
     {/if}
     <CardItem
         label="Patient"
-        value={ data.reference }
+        value={ data.patient.reference }
     />
 </Card>
 

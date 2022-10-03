@@ -18,6 +18,11 @@
             title: 'Resources',
         },
         {
+            path: 'patient-everything',
+            icon: 'mdi:patient',
+            title: 'Patient Everything',
+        },
+        {
             path: 'auth',
             icon: 'mdi:gear',
             title: 'Authentication Config',

@@ -4,7 +4,7 @@
     {:then resources} 
         {#each resources as resource}
             <svelte:component
-                this={components[type]}
+                this={getResourceCard(type)}
                 data={resource.resource}
             />
         {/each}
@@ -14,20 +14,8 @@
 </div>
 
 <script>
-    import PatientCard from '$components/ResourceCard/PatientCard.svelte'
-    import PersonCard from '$components/ResourceCard/PersonCard.svelte'
-    import CarePlanCard from '$components/ResourceCard/CarePlanCard.svelte'
-    import ProcedureCard from '$components/ResourceCard/ProcedureCard.svelte'
-    import DeviceCard from '$components/ResourceCard/DeviceCard.svelte'
     import { getResources } from '$apis/Resource'
+    import { getResourceCard } from '$apis/ResourceCard'
 
     export let type;
-
-    let components = {
-        Patient: PatientCard,
-        RelatedPerson: PersonCard,
-        CarePlan: CarePlanCard,
-        Procedure: ProcedureCard,
-        Device: DeviceCard,
-    }
 </script>
