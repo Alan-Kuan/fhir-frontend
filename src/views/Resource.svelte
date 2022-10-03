@@ -40,5 +40,6 @@
 <style>
     main {
         width: 70%;
+        padding-bottom: 2rem;
     }
 </style>
