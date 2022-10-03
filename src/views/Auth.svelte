@@ -2,15 +2,15 @@
     <h2>Authentication Config</h2>
     <form on:submit|preventDefault={onSubmit}>
         <div class="row">
-            <span>帳號</span>
+            <span>Username</span>
             <input type="text" bind:value={account} />
         </div>
         <div class="row">
-            <span>密碼</span>
+            <span>Password</span>
             <input type="password" bind:value={password} />
         </div>
         <div class="row">
-            <button type="submit">確定</button>
+            <button type="submit">Submit</button>
         </div>
     </form>
 </main>
@@ -23,7 +23,7 @@
         localStorage.setItem('account', account)
         localStorage.setItem('password', password)
         location.reload()
-        alert('已儲存帳號密碼！')
+        alert('The account was saved！')
     }
 </script>
 
