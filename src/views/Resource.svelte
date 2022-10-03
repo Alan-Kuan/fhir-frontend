@@ -10,7 +10,7 @@
 
 <script>
     import ResourceList from '$components/ResourceList.svelte'
-    import Select from '$components/Select.svelte'
+    import Select from '$components/UI/Select.svelte'
 
     let selected = 0
     let resources = [

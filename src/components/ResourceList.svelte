@@ -15,11 +15,13 @@
 
 <script>
     import PatientCard from '$components/Patient/PatientCard.svelte'
+    import PersonCard from '$components/RelatedPerson/PersonCard.svelte';
     import { getResources } from '$apis/Resource'
 
     export let type;
 
     let components = {
         Patient: PatientCard,
+        RelatedPerson: PersonCard,
     }
 </script>

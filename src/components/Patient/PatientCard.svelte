@@ -1,30 +1,21 @@
-<div class="card">
-    <div>
-        <span>Name | </span>
-        <span>{ data.name ? (data.name[0].text ?? 'Unknown') : 'Unknown' }</span>
-    </div>
-    <div>
-        <span>Gender | </span>
-        <span>{ data.gender ?? 'Unknown' }</span>
-    </div>
-    <div>
-        <span>Birth Date | </span>
-        <span>{ data.birthDate ?? 'Unknown' }</span>
-    </div>
-</div>
+<Card>
+    <CardItem
+        label="Name"
+        value={ data.name ? (data.name[0].text ?? 'Unknown') : 'Unknown' }
+    />
+    <CardItem
+        label="Gender"
+        value={ data.gender ?? 'Unknown' }
+    />
+    <CardItem
+        label="Birth Date"
+        value={ data.birthDate ?? 'Unknown' }
+    />
+</Card>
 
 <script>
-    export let data;
-</script>
+    import Card from '$components/UI/Card.svelte'
+    import CardItem from '$components/UI/CardItem.svelte'
 
-<style>
-    .card {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 1rem;
-        margin-bottom: 1rem;
-        border: 1px solid white;
-        border-radius: 10px;
-    }
-</style>
+    export let data
+</script>
