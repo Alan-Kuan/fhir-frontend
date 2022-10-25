@@ -2,12 +2,10 @@
     <h2>Authentication Config</h2>
     <form on:submit|preventDefault={onSubmit}>
         <div class="row">
-            <span>Username</span>
-            <input type="text" bind:value={account} />
+            <Input label="Username" bind:value={account} />
         </div>
         <div class="row">
-            <span>Password</span>
-            <input type="password" bind:value={password} />
+            <Input label="Password" bind:value={password} type="password" />
         </div>
         <div class="row">
             <button type="submit">Submit</button>
@@ -16,6 +14,8 @@
 </main>
 
 <script>
+    import Input from '$components/UI/Input.svelte'
+
     let account = localStorage.getItem('account') ?? ''
     let password = localStorage.getItem('password') ?? ''
 

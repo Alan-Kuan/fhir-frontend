@@ -2,8 +2,7 @@
     <h2>Patient Everything</h2>
 
     <form on:submit|preventDefault={onSubmit}>
-        <span>Patient ID</span>
-        <input type="text" bind:value={patient_id} />
+        <Input label="Patient ID" bind:value={patient_id} />
         <button type="submit">Submit</button>
     </form>
 
@@ -14,6 +13,7 @@
 
 <script>
     import ResourceList from '$components/ResourceList.svelte'
+    import Input from '$components/UI/Input.svelte'
     import { getPatientEverything } from '$apis/Resource'
 
     let patient_id = ''

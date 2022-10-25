@@ -3,29 +3,23 @@
 
     <form on:submit|preventDefault={onSubmit}>
         <div class="row">
-            <input type="checkbox" id="deident" bind:checked={enable_deidentified} />
-            <label for="deident">Deidentified Export</label>
+            <Input label="Deidentified Export" bind:value={enable_deidentified} type="checkbox" />
         </div>
         <div class="row">
-            <span>Container Name</span>
-            <input type="text" bind:value={container} />
+            <Input label="Container Name" bind:value={container} />
         </div>
         <div class="row">
-            <span>Type</span>
-            <input type="text" bind:value={type} />
+            <Input label="Type" bind:value={type} />
         </div>
         <div class="row">
-            <span>Since</span>
-            <input type="text" bind:value={since} />
+            <Input label="Since" bind:value={since} />
         </div>
         {#if enable_deidentified}
         <div class="row">
-            <span>Anonymization Config</span>
-            <input type="text" bind:value={anonym_config} />
+            <Input label="Anonymization Config" bind:value={anonym_config} />
         </div>
         <div class="row">
-            <span>Anonymization Config Etag</span>
-            <input type="text" bind:value={anonym_config_etag} />
+            <Input label="Anonymization Config Etag" bind:value={anonym_config_etag} />
         </div>
         {/if}
         <div class="row">
@@ -35,6 +29,7 @@
 </main>
 
 <script>
+    import Input from '$components/UI/Input.svelte'
     import { exportData } from '$apis/Export'
 
     let enable_deidentified = false
