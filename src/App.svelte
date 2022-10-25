@@ -2,7 +2,9 @@
     <Header />
     <div class="content">
         {#each routes as route}
-        <Route path={route.path} component={route.component} />
+        <Route path={route.path} primary={false}>
+            <svelte:component this={route.component} />
+        </Route>
         {/each}
     </div>
 </Router>
@@ -13,31 +15,36 @@
     import HomeView from '$views/Home.svelte'
     import ResourceView from '$views/Resource.svelte'
     import PatientEverythingView from '$views/PatientEverything.svelte'
+    import ExportView from '$views/Export.svelte'
     import AuthView from '$views/Auth.svelte'
 
     let routes = [
-      {
-        path: '/',
-        component: HomeView,
-      },
-      {
-        path: 'resource',
-        component: ResourceView,
-      },
-      {
-        path: 'patient-everything',
-        component: PatientEverythingView,
-      },
-      {
-        path: 'auth',
-        component: AuthView,
-      },
+        {
+            path: '/',
+            component: HomeView,
+        },
+        {
+            path: 'resource',
+            component: ResourceView,
+        },
+        {
+            path: 'patient-everything',
+            component: PatientEverythingView,
+        },
+        {
+            path: 'export',
+            component: ExportView,
+        },
+        {
+            path: 'auth',
+            component: AuthView,
+        },
     ]
 </script>
 
 <style>
-  .content {
-    margin-top: 3rem;
-    padding: 0 10rem;
-  }
+    .content {
+        margin-top: 3rem;
+        padding: 0 10rem;
+    }
 </style>

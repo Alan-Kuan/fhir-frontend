@@ -23,6 +23,11 @@
             title: 'Patient Everything',
         },
         {
+            path: 'export',
+            icon: 'mdi-export-variant',
+            title: 'Bulk Export',
+        },
+        {
             path: 'auth',
             icon: 'mdi:gear',
             title: 'Authentication Config',
