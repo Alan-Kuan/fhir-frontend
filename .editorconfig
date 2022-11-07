@@ -2,7 +2,10 @@ root = true
 
 [*]
 end_of_line = lf
-
-[*.config.js]
 indent_style = space
+
+[{*.config.js,*.css}]
 indent_size = 2
+
+[*.svelte]
+indent_size = 4
