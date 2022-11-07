@@ -1,11 +1,11 @@
 <Link to={path} class="no-underline">
     <div
       class="block
-        mx-1 py-2 rounded-xl text-center
+        m-1 py-2 rounded-xl text-center
         flex flex-col justify-center items-center
         border border-solid border-gray-400
         transition-colors duration-1000
-        bg-secondary hover:bg-primary"
+        bg-sky-200 hover:bg-primary"
     >
         <Icon
           icon={icon}
