@@ -9,12 +9,7 @@
             <Input label="Password" bind:value={password} type="password" />
         </div>
         <div class="mt-4">
-            <button
-              class="btn btn-success btn-sm text-white font-normal normal-case"
-              type="submit"
-            >
-                Submit
-            </button>
+            <SubmitButton />
         </div>
     </form>
 </main>
@@ -22,6 +17,7 @@
 <script>
     import PageTitle from '$components/UI/PageTitle.svelte'
     import Input from '$components/UI/Input.svelte'
+    import SubmitButton from '$components/UI/SubmitButton.svelte'
 
     let account = localStorage.getItem('account') ?? ''
     let password = localStorage.getItem('password') ?? ''
