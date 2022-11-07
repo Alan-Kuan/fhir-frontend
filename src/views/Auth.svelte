@@ -1,19 +1,29 @@
 <main>
-    <h2>Authentication Config</h2>
-    <form on:submit|preventDefault={onSubmit}>
-        <div class="row">
+    <PageTitle>Authentication Config</PageTitle>
+
+    <form
+      class="flex flex-col"
+      on:submit|preventDefault={onSubmit}
+    >
+        <div class="mt-4">
             <Input label="Username" bind:value={account} />
         </div>
-        <div class="row">
+        <div class="mt-4">
             <Input label="Password" bind:value={password} type="password" />
         </div>
-        <div class="row">
-            <button type="submit">Submit</button>
+        <div class="mt-4">
+            <button
+              class="btn btn-success btn-sm text-white font-normal normal-case"
+              type="submit"
+            >
+                Submit
+            </button>
         </div>
     </form>
 </main>
 
 <script>
+    import PageTitle from '$components/UI/PageTitle.svelte'
     import Input from '$components/UI/Input.svelte'
 
     let account = localStorage.getItem('account') ?? ''
@@ -26,13 +36,3 @@
         alert('The account was saved！')
     }
 </script>
-
-<style>
-    form {
-        display: flex;
-        flex-direction: column;
-    }
-    .row {
-        margin-top: 1rem;
-    }
-</style>

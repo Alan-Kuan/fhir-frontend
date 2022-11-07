@@ -1,9 +1,17 @@
 <main>
-    <h2>Patient Everything</h2>
+    <PageTitle>Patient Everything</PageTitle>
 
-    <form on:submit|preventDefault={onSubmit}>
+    <form
+      class="mb-8"
+      on:submit|preventDefault={onSubmit}
+    >
         <Input label="Patient ID" bind:value={patient_id} />
-        <button type="submit">Submit</button>
+        <button
+          class="btn btn-success btn-sm text-white font-normal normal-case"
+          type="submit"
+        >
+            Submit
+        </button>
     </form>
 
     {#if ready}
@@ -12,6 +20,7 @@
 </main>
 
 <script>
+    import PageTitle from '$components/UI/PageTitle.svelte'
     import ResourceList from '$components/ResourceList.svelte'
     import Input from '$components/UI/Input.svelte'
     import { getPatientEverything } from '$apis/Resource'
@@ -25,9 +34,3 @@
         get_resources = getPatientEverything(patient_id)
     }
 </script>
-
-<style>
-    form {
-        margin-bottom: 2rem;
-    }
-</style>

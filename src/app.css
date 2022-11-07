@@ -29,15 +29,6 @@ body {
   min-height: 100vh;
 }
 
-h1 {
-  margin: 0;
-  font-size: 3.2em;
-  line-height: 1.1;
-}
-h2 {
-  color: var(--site-main-color);
-}
-
 #app {
   width: 100%;
   box-sizing: border-box;
@@ -69,9 +60,4 @@ input {
   color: black;
   background-color: white;
   font-size: 1rem;
-}
-
-select {
-  color: black;
-  background-color: white;
 }

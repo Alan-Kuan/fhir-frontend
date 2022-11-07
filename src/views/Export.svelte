@@ -1,34 +1,43 @@
 <main>
-    <h2>Bulk Export</h2>
+    <PageTitle>Bulk Export</PageTitle>
 
-    <form on:submit|preventDefault={onSubmit}>
-        <div class="row">
+    <form
+      class="flex flex-col"
+      on:submit|preventDefault={onSubmit}
+    >
+        <div class="mt-4">
             <Input label="Deidentified Export" bind:value={enable_deidentified} type="checkbox" />
         </div>
-        <div class="row">
+        <div class="mt-4">
             <Input label="Container Name" bind:value={container} />
         </div>
-        <div class="row">
+        <div class="mt-4">
             <Input label="Type" bind:value={type} />
         </div>
-        <div class="row">
+        <div class="mt-4">
             <Input label="Since" bind:value={since} />
         </div>
         {#if enable_deidentified}
-        <div class="row">
+        <div class="mt-4">
             <Input label="Anonymization Config" bind:value={anonym_config} />
         </div>
-        <div class="row">
+        <div class="mt-4">
             <Input label="Anonymization Config Etag" bind:value={anonym_config_etag} />
         </div>
         {/if}
-        <div class="row">
-            <button type="submit">Submit</button>
+        <div class="mt-4">
+            <button
+              class="btn btn-success btn-sm text-white font-normal normal-case"
+              type="submit"
+            >
+                Submit
+            </button>
         </div>
     </form>
 </main>
 
 <script>
+    import PageTitle from '$components/UI/PageTitle.svelte'
     import Input from '$components/UI/Input.svelte'
     import { exportData } from '$apis/Export'
 
@@ -55,14 +64,3 @@
             })
     }
 </script>
-
-<style>
-    form {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .row {
-        margin-top: 1rem;
-    }
-</style>

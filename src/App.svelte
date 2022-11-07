@@ -1,6 +1,6 @@
 <Router>
     <Header />
-    <div class="content">
+    <div class="mt-12 px-40">
         {#each routes as route}
         <Route path={route.path} primary={false}>
             <svelte:component this={route.component} />
@@ -41,10 +41,3 @@
         },
     ]
 </script>
-
-<style>
-    .content {
-        margin-top: 3rem;
-        padding: 0 10rem;
-    }
-</style>

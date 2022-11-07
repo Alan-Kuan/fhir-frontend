@@ -1,27 +1,27 @@
-<div class="wrapper">
+<div class="wrapper relative inline-block">
     <select
-        bind:value={selected}
-        style="width: {width};"
+      class="
+        px-4 py-2 bg-white
+        border border-solid border-black rounded-2xl
+        appearance-none cursor-pointer"
+      style="width: {width};"
+      bind:value={selected}
     >
         {#each items as item, idx}
-            <option value={item.value ?? idx}>
-                {item.text ?? item}
-            </option>
+        <option value={item.value ?? idx}>
+            {item.text ?? item}
+        </option>
         {/each}
     </select>
 </div>
 
 <script>
-    export let selected;
-    export let items;
-    export let width;
+    export let selected
+    export let items
+    export let width
 </script>
 
 <style>
-    .wrapper {
-        display: inline-block;
-        position: relative;
-    }
     .wrapper::after {
         content: '▼';
         position: absolute;
@@ -33,11 +33,5 @@
 
     .wrapper:hover select {
         background-color: #c2c2c2;
-    }
-    select {
-        padding: 0.5rem 1rem;
-        border-radius: 15px;
-        appearance: none;
-        cursor: pointer;
     }
 </style>

@@ -1,22 +1,28 @@
 <Card>
-    <div class="content">
+    <div class="w-full pr-16 border-box">
         {#if display_raw || !$$slots.content}
-            <pre>{ JSON.stringify(data, null, 2) }</pre>
+        <pre class="overflow-x-scroll">{ JSON.stringify(data, null, 2) }</pre>
         {:else}
-            <slot name="content"></slot>
+        <slot name="content"></slot>
         {/if}
     </div>
 
     {#if $$slots.content}
     <button
-        class="switch"
-        on:click={onClickSwitch}
+      class="
+        absolute top-2 right-2
+        border border-solid border-gray-500
+        text-black bg-transparent"
+      on:click={onClickSwitch}
     >
         { switch_text }
     </button>
     {/if}
 
-    <div class="icon">
+    <div
+      class="absolute right-1 bottom-2
+        text-6xl text-gray-500 z-0"
+    >
         <Icon icon={icon} />
     </div>
 </Card>
@@ -36,32 +42,3 @@
         display_raw = !display_raw
     }
 </script>
-
-<style>
-    .content {
-        width: 100%;
-        padding-right: 4rem;
-        box-sizing: border-box;
-    }
-    pre {
-        overflow-x: scroll;
-    }
-
-    .switch {
-        position: absolute;
-        top: 0.5rem;
-        right: 0.5rem;
-        border: 1px solid gray;
-        background-color: transparent;
-        color: black;
-    }
-
-    .icon {
-        position: absolute;
-        right: 0.2rem;
-        bottom: 0.5rem;
-        z-index: -1;
-        color: gray;
-        font-size: 4rem;
-    }
-</style>

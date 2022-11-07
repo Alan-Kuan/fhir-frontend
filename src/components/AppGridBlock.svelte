@@ -1,7 +1,22 @@
-<Link to={path} class="link">
-    <div class="block">
-        <Icon icon={icon} class="icon" />
-        <div class="title">{title}</div>
+<Link to={path} class="no-underline">
+    <div
+      class="block
+        mx-1 py-2 rounded-xl text-center
+        flex flex-col justify-center items-center
+        border border-solid border-gray-400
+        transition-colors duration-1000
+        bg-secondary hover:bg-primary"
+    >
+        <Icon
+          icon={icon}
+          class="icon text-neutral text-8xl transition-colors duration-200"
+        />
+        
+        <div
+          class="title text-neutral font-bold transition-colors duration-200"
+        >
+            {title}
+        </div>
     </div>
 </Link>
 
@@ -15,35 +30,8 @@
 </script>
 
 <style>
-    .block {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        width: 15rem;
-        height: 10rem;
-        margin: 0 1rem;
-        border: 1px solid darkgray;
-        border-radius: 10px;
-        background-color: #b3e2ff;
-        text-align: center;
-        transition: background-color 1s;
-    }
-    .block :global(.icon) {
-        font-size: 6rem;
-        color: #555555;
-        transition: color .5s;
-    }
-    .block .title {
-        font-weight: bold;
-        color: #555555;
-        transition: color .5s;
-    }
-    .block:hover {
-        background: var(--site-main-color);
-    }
     .block:hover :global(.icon),
     .block:hover .title {
-        color: var(--site-bg);
+        color: white;
     }
 </style>

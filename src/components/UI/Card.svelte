@@ -1,15 +1,8 @@
-<div class="card">
+<div
+  class="
+    relative p-4 mb-4
+    flex flex-col items-start
+    shadow-md"
+>
     <slot></slot>
 </div>
-
-<style>
-    .card {
-        position: relative;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 1rem;
-        margin-bottom: 1rem;
-        box-shadow: 1px 1px 5px gray;
-    }
-</style>
