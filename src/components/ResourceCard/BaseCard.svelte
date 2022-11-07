@@ -10,9 +10,9 @@
     {#if $$slots.content}
     <button
       class="
+        btn btn-outline btn-sm
         absolute top-2 right-2
-        border border-solid border-gray-500
-        text-black bg-transparent"
+        text-black hover:text-white font-normal normal-case"
       on:click={onClickSwitch}
     >
         { switch_text }
@@ -20,7 +20,8 @@
     {/if}
 
     <div
-      class="absolute right-1 bottom-2
+      class="
+        absolute right-1 bottom-2
         text-6xl text-gray-500 z-0"
     >
         <Icon icon={icon} />
