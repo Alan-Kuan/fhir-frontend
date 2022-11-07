@@ -1,17 +1,31 @@
 {#if type === 'text'}
-<label>
-    {label}
-    <input type="text" bind:value={value} />
+<label class="input-group input-group-sm">
+    <span>{label}</span>
+    <input
+      class="input input-sm input-bordered"
+      type="text"
+      bind:value={value}
+    />
 </label>
+
 {:else if type === 'password'}
-<label>
-    {label}
-    <input type="password" bind:value={value} />
+<label class="input-group input-group-sm">
+    <span>{label}</span>
+    <input
+      class="input input-sm input-bordered"
+      type="password"
+      bind:value={value}
+    />
 </label>
+
 {:else if type === 'checkbox'}
-<label>
-    <input type="checkbox" bind:checked={value} />
-    {label}
+<label class="label cursor-pointer">
+    <input
+      class="checkbox checkbox-sm checkbox-primary"
+      type="checkbox"
+      bind:checked={value}
+    />
+    <span class="label-text">{label}</span>
 </label>
 {/if}
 

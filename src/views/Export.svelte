@@ -1,11 +1,8 @@
 <main>
     <PageTitle>Bulk Export</PageTitle>
 
-    <form
-      class="flex flex-col"
-      on:submit|preventDefault={onSubmit}
-    >
-        <div class="mt-4">
+    <form on:submit|preventDefault={onSubmit}>
+        <div class="mt-4 w-40">
             <Input label="Deidentified Export" bind:value={enable_deidentified} type="checkbox" />
         </div>
         <div class="mt-4">

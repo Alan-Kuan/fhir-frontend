@@ -1,17 +1,18 @@
 <main>
     <PageTitle>Patient Everything</PageTitle>
 
-    <form
-      class="mb-8"
-      on:submit|preventDefault={onSubmit}
-    >
-        <Input label="Patient ID" bind:value={patient_id} />
-        <button
-          class="btn btn-success btn-sm text-white font-normal normal-case"
-          type="submit"
-        >
-            Submit
-        </button>
+    <form on:submit|preventDefault={onSubmit}>
+        <div class="mt-4">
+            <Input label="Patient ID" bind:value={patient_id} />
+        </div>
+        <div class="mt-4">
+            <button
+              class="btn btn-success btn-sm text-white font-normal normal-case"
+              type="submit"
+            >
+                Submit
+            </button>
+        </div>
     </form>
 
     {#if ready}

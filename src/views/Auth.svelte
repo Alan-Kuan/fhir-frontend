@@ -1,10 +1,7 @@
 <main>
     <PageTitle>Authentication Config</PageTitle>
 
-    <form
-      class="flex flex-col"
-      on:submit|preventDefault={onSubmit}
-    >
+    <form on:submit|preventDefault={onSubmit}>
         <div class="mt-4">
             <Input label="Username" bind:value={account} />
         </div>
