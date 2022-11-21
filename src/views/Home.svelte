@@ -20,13 +20,18 @@
             title: 'Resources',
         },
         {
+            path: 'medical-record',
+            icon: 'mdi:clipboard-pulse-outline',
+            title: 'Medical Record',
+        },
+        {
             path: 'patient-everything',
-            icon: 'mdi:patient',
+            icon: 'material-symbols:all-inbox-rounded',
             title: 'Patient Everything',
         },
         {
             path: 'export',
-            icon: 'mdi-export-variant',
+            icon: 'mdi:export-variant',
             title: 'Bulk Export',
         },
         {

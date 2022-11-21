@@ -23,7 +23,7 @@
         </div>
         {/if}
         <div class="mt-4">
-            <SubmitButton />
+            <SubmitButton btn_size="btn-sm" />
         </div>
     </form>
 </main>

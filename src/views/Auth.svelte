@@ -9,7 +9,7 @@
             <Input label="Password" bind:value={password} type="password" />
         </div>
         <div class="mt-4">
-            <SubmitButton />
+            <SubmitButton btn_size="btn-sm" />
         </div>
     </form>
 </main>

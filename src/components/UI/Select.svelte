@@ -1,10 +1,7 @@
-<div class="wrapper relative inline-block">
+<label class="input-group input-group-sm">
+    <span class="{label_width}">{label}</span>
     <select
-      class="
-        px-4 py-2 bg-white
-        border border-solid border-black rounded-2xl
-        appearance-none cursor-pointer"
-      style="width: {width};"
+      class="select select-bordered {select_size} {select_width}"
       bind:value={selected}
     >
         {#each items as item, idx}
@@ -13,25 +10,13 @@
         </option>
         {/each}
     </select>
-</div>
+</label>
 
 <script>
+    export let label
     export let selected
     export let items
-    export let width
+    export let select_size = 'select-md'
+    export let label_width = ''
+    export let select_width = ''
 </script>
-
-<style>
-    .wrapper::after {
-        content: '▼';
-        position: absolute;
-        top: 50%;
-        right: 0.5rem;
-        transform: translateY(-50%);
-        cursor: pointer;
-    }
-
-    .wrapper:hover select {
-        background-color: #c2c2c2;
-    }
-</style>

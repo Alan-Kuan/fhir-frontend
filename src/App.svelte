@@ -14,6 +14,7 @@
     import Header from '$components/Header.svelte'
     import HomeView from '$views/Home.svelte'
     import ResourceView from '$views/Resource.svelte'
+    import MedicalRecordView from '$views/MedicalRecord.svelte'
     import PatientEverythingView from '$views/PatientEverything.svelte'
     import ExportView from '$views/Export.svelte'
     import AuthView from '$views/Auth.svelte'
@@ -26,6 +27,10 @@
         {
             path: 'resource',
             component: ResourceView,
+        },
+        {
+            path: 'medical-record',
+            component: MedicalRecordView,
         },
         {
             path: 'patient-everything',

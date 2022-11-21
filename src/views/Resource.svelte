@@ -1,9 +1,9 @@
 <main class="w-3/4 mb-8">
     <div class="mb-4">
         <Select
+          label="Resource"
           bind:selected={selected}
           items={resources}
-          width="10rem"
         />
     </div>
     <PageTitle>List of {resource_type}:</PageTitle>

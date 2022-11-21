@@ -19,6 +19,7 @@
   },
   "dependencies": {
     "axios": "^0.27.2",
-    "svelte-navigator": "^3.2.2"
+    "svelte-navigator": "^3.2.2",
+    "svelty-picker": "^3.2.3"
   }
 }
