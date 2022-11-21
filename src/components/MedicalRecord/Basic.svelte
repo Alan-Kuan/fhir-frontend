@@ -37,7 +37,7 @@
       input_width="w-7/12"
     />
     <Input
-      label="Spoken Language"
+      label="Mother Language"
       bind:value={language}
       label_width="w-5/12"
       input_width="w-7/12"

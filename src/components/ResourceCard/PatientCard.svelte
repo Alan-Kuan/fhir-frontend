@@ -7,7 +7,7 @@
         <CardItem label="Name" value={name} />
         <CardItem label="Gender" value={gender} />
         <CardItem label="Birth Date" value={birth_date} />
-        <CardItem label="Speaking Language" value={language} />
+        <CardItem label="Mother Language" value={language} />
     </div>
 </BaseCard>
 
