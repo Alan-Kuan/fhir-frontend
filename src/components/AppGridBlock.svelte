@@ -9,7 +9,7 @@
     >
         <Icon
           icon={icon}
-          class="icon text-neutral text-8xl transition-colors duration-200"
+          class="text-neutral text-8xl transition-colors duration-200"
         />
         
         <div

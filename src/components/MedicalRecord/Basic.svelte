@@ -6,7 +6,7 @@
         <form
           class="
             mt-2
-            grid auto-rows-auto gap-y-4"
+            grid auto-rows-auto gap-y-2"
           on:submit|preventDefault={onSubmit}
         >
             <Input

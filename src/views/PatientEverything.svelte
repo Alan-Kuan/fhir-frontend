@@ -2,24 +2,35 @@
     <PageTitle>Patient Everything</PageTitle>
 
     <form on:submit|preventDefault={onSubmit}>
-        <div class="mt-4">
-            <Input label="Patient ID" bind:value={patient_id} />
-        </div>
-        <div class="mt-4">
-            <SubmitButton btn_size="btn-sm" />
-        </div>
+        <label class="input-group input-group-sm">
+            <span class="">Patient ID</span>
+            <input
+              class="input input-sm input-bordered"
+              type="text"
+              bind:value={patient_id}
+            />
+            <button
+              class="
+                btn btn-success btn-sm
+                text-white font-normal normal-case
+                hover:opacity-70"
+              type="submit"
+            >
+                Search
+            </button>
+        </label>
     </form>
 
     {#if ready}
-    <ResourceList get_resources={get_resources} />
+    <div class="mt-4">
+        <ResourceList get_resources={get_resources} />
+    </div>
     {/if}
 </main>
 
 <script>
     import PageTitle from '$components/UI/PageTitle.svelte'
     import ResourceList from '$components/ResourceList.svelte'
-    import Input from '$components/UI/Input.svelte'
-    import SubmitButton from '$components/UI/SubmitButton.svelte'
     import { getPatientEverything } from '$apis/Resource'
 
     let patient_id = ''
