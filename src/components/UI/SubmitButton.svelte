@@ -6,14 +6,16 @@
   type="submit"
 >
     <Icon
-      icon="ic:round-send"
+      icon={icon}
       class="text-lg"
     />
-    Submit
+    {text}
 </button>
 
 <script>
     import Icon from '@iconify/svelte'
 
+    export let icon = 'ic:round-send'
+    export let text = 'Submit'
     export let btn_size = 'btn-md'
 </script>

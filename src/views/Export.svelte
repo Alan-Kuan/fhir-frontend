@@ -1,37 +1,58 @@
 <main>
     <PageTitle>Bulk Export</PageTitle>
 
-    <form on:submit|preventDefault={onSubmit}>
-        <div class="mt-4 w-40">
-            <Input label="Deidentified Export" bind:value={enable_deidentified} type="checkbox" />
-        </div>
-        <div class="mt-4">
-            <Input label="Container Name" bind:value={container} />
-        </div>
-        <div class="mt-4">
-            <Input label="Type" bind:value={type} />
-        </div>
-        <div class="mt-4">
-            <Input label="Since" bind:value={since} />
-        </div>
+    <Form
+      card_classes="w-1/2"
+      on_submit={onSubmit}
+    >
+        <Input
+          label="Deidentified Export"
+          bind:value={enable_deidentified}
+          type="checkbox"
+        />
+        <Input
+          label="Container Name"
+          bind:value={container}
+          label_width="w-4/12"
+          input_width="w-8/12"
+        />
+        <Input
+          label="Type"
+          bind:value={type}
+          label_width="w-4/12"
+          input_width="w-8/12"
+        />
+        <Input
+          label="Since"
+          bind:value={since}
+          label_width="w-4/12"
+          input_width="w-8/12"
+        />
+
         {#if enable_deidentified}
-        <div class="mt-4">
-            <Input label="Anonymization Config" bind:value={anonym_config} />
-        </div>
-        <div class="mt-4">
-            <Input label="Anonymization Config Etag" bind:value={anonym_config_etag} />
-        </div>
+        <Input
+          label="Anonymization Config"
+          bind:value={anonym_config}
+          label_width="w-6/12"
+          input_width="w-6/12"
+        />
+        <Input
+          label="Anonymization Config Etag"
+          bind:value={anonym_config_etag}
+          label_width="w-6/12"
+          input_width="w-6/12"
+        />
         {/if}
-        <div class="mt-4">
-            <SubmitButton btn_size="btn-sm" />
-        </div>
-    </form>
+
+        <SubmitButton />
+    </Form>
 </main>
 
 <script>
     import PageTitle from '$components/UI/PageTitle.svelte'
     import Input from '$components/UI/Input.svelte'
     import SubmitButton from '$components/UI/SubmitButton.svelte'
+    import Form from '$components/UI/Form.svelte'
     import { exportData } from '$apis/Export'
 
     let enable_deidentified = false
@@ -43,8 +64,8 @@
 
     function onSubmit() {
         if (enable_deidentified) {
-            if (anonym_config.length === 0 || anonym_config_etag.length === 0) {
-                alert('Anonymization Config and Anonymization Config Etag are requried!')
+            if (anonym_config.length === 0) {
+                alert('Anonymization Config is requried!')
                 return
             }
         }

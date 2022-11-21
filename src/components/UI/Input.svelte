@@ -30,13 +30,13 @@
     </div>
 
     {:else if type === 'checkbox'}
-    <label class="label cursor-pointer">
+    <label class="label justify-start cursor-pointer">
         <input
           class="checkbox checkbox-sm checkbox-primary"
           type="checkbox"
           bind:checked={value}
         />
-        <span class="label-text">{label}</span>
+        <span class="label-text pl-1">{label}</span>
     </label>
     {/if}
 </div>
