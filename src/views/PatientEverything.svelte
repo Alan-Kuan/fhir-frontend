@@ -16,6 +16,10 @@
                 hover:opacity-70"
               type="submit"
             >
+                <Icon
+                  icon="ic:baseline-search"
+                  class="text-lg"
+                />
                 Search
             </button>
         </label>
@@ -32,6 +36,7 @@
     import PageTitle from '$components/UI/PageTitle.svelte'
     import ResourceList from '$components/ResourceList.svelte'
     import { getPatientEverything } from '$apis/Resource'
+    import Icon from '@iconify/svelte'
 
     let patient_id = ''
     let ready = false
