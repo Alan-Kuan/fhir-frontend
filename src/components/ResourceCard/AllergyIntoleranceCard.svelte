@@ -41,7 +41,7 @@
         />
         <CardList label="Note">
             {#each data.note as note}
-            <div>{note.text}</div>
+            <CardListItem value={note.text} />
             {/each}
         </CardList>
     </div>
@@ -51,6 +51,7 @@
     import BaseCard from '$components/ResourceCard/BaseCard.svelte'
     import CardItem from '$components/UI/CardItem.svelte'
     import CardList from '$components/UI/CardList.svelte'
+    import CardListItem from '$components/UI/CardListItem.svelte'
 
     $: category = data.category.join(',')
 

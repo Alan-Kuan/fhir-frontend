@@ -13,7 +13,7 @@
         />
         <CardList label="Telecom">
             {#each data.telecom as telecom}
-            <CardItem
+            <CardListItem
                 label={telecom.system}
                 value={telecom.value}
             />
@@ -26,6 +26,7 @@
     import BaseCard from '$components/ResourceCard/BaseCard.svelte'
     import CardItem from '$components/UI/CardItem.svelte'
     import CardList from '$components/UI/CardList.svelte'
+    import CardListItem from '$components/UI/CardListItem.svelte'
 
     export let data
 </script>

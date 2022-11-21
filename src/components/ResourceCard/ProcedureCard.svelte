@@ -22,14 +22,14 @@
         {#if data.followUp }
         <CardList label="Follow Up">
             {#each data.followUp as follow_up }
-            <div>{ follow_up.text }</div>
+            <CardListItem value={ follow_up.text } />
             {/each}
         </CardList>
         {/if}
         {#if data.note }
         <CardList label="Note">
             {#each data.note as note }
-            <div>{ note.text }</div>
+            <CardListItem value={ note.text } />
             {/each}
         </CardList>
         {/if}
@@ -40,6 +40,7 @@
     import BaseCard from '$components/ResourceCard/BaseCard.svelte'
     import CardItem from '$components/UI/CardItem.svelte'
     import CardList from '$components/UI/CardList.svelte'
+    import CardListItem from '$components/UI/CardListItem.svelte'
 
     export let data
 </script>
