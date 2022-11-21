@@ -31,8 +31,8 @@
       input_width="w-8/12"
     />
     <Input
-      label="Contact Number"
-      bind:value={contact}
+      label="Phone Number"
+      bind:value={phone}
       label_width="w-5/12"
       input_width="w-7/12"
     />
@@ -50,17 +50,46 @@
     import Select from '$components/UI/Select.svelte'
     import SubmitButton from '$components/UI/SubmitButton.svelte'
     import Form from '$components/UI/Form.svelte'
+    import { addPatient } from '$apis/Patient'
 
     let first_name = ''
     let last_name = ''
-    let gender = 0
+    let gender = 'male'
     let birthdate = null
-    let contact = ''
+    let phone = ''
     let language = ''
 
-    let genders = ['Male', 'Female', 'Other']
+    let genders = [
+        { text: 'Male', value: 'male' },
+        { text: 'Female', value: 'famale' },
+        { text: 'Other', value: 'other' }
+    ]
+
+    function reset() {
+        first_name = ''
+        last_name = ''
+        gender = 'male'
+        birthdate = null
+        phone = ''
+        language = ''
+    }
 
     function onSubmit() {
-
+        alert('Successfully submitted!')
+        addPatient({
+            first_name,
+            last_name,
+            gender,
+            birthdate,
+            phone,
+            language,
+        })
+            .then(() => {
+                alert('Successfully added!')
+                reset()
+            })
+            .catch(err => {
+                alert(`Error: ${err}`)
+            })
     }
 </script>

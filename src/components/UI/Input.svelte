@@ -23,9 +23,10 @@
     <div class="input-group input-group-sm">
         <span class="{label_width}">{label}</span>
         <SveltyPicker
-            inputClasses="input input-sm input-bordered {input_width}"
-            format="yyyy-mm-dd"
-            bind:value={value}
+          inputClasses="input input-sm input-bordered {input_width}"
+          format="yyyy-mm-dd"
+          clearToggle={false}
+          bind:value={value}
         />
     </div>
 
