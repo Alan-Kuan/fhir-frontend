@@ -1,0 +1,12 @@
+# project
+node_modules
+.git*
+dist
+README.md
+
+# editors
+.vscode
+.editorconfig
+
+# az cli
+.deployment
