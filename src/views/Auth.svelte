@@ -6,6 +6,12 @@
       on_submit={onSubmit}
     >
         <Input
+          label="API Endpoint"
+          bind:value={endpoint}
+          label_width="w-4/12"
+          input_width="w-8/12"
+        />
+        <Input
           label="Username"
           bind:value={account}
           label_width="w-4/12"
@@ -32,13 +38,15 @@
     import SubmitButton from '$components/UI/SubmitButton.svelte'
     import Form from '$components/UI/Form.svelte'
 
+    let endpoint = localStorage.getItem('endpoint') ?? ''
     let account = localStorage.getItem('account') ?? ''
     let password = localStorage.getItem('password') ?? ''
 
     function onSubmit() {
+        localStorage.setItem('endpoint', endpoint)
         localStorage.setItem('account', account)
         localStorage.setItem('password', password)
         location.reload()
-        alert('The account was saved！')
+        alert('Config was saved！')
     }
 </script>
