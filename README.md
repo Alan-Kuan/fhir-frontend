@@ -3,7 +3,7 @@ A web application to demo FHIR Service
 
 ## Docker
 ### Pull Docker Image
-This repository contains a GitHub Action workflow that deploy's each release.
+This repository contains a GitHub Action workflow that deploys each release.
 
 ```sh
 docker pull ghcr.io/alan-kuan/fhir-frontend:latest
@@ -13,14 +13,14 @@ docker pull ghcr.io/alan-kuan/fhir-frontend:latest
 It creates a docker image of the web app.
 
 ```sh
-docker build .
+docker build -t <tag> .
 ```
 
 ## Project
 - Node Version: 16
 - Package Manager: pnpm
-- Frontend Tooling: vite
-- Web Framework: svelte
+- Frontend Tooling: Vite
+- Web Framework: Svelte
 
 ### Install Dependencies
 ```sh
