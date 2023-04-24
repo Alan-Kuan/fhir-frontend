@@ -5,12 +5,14 @@
       card_classes="w-1/2"
       on_submit={onSubmit}
     >
+        {#if import.meta.env.DEV}
         <Input
           label="API Endpoint"
           bind:value={endpoint}
           label_width="w-4/12"
           input_width="w-8/12"
         />
+        {/if}
         <Input
           label="Username"
           bind:value={account}
@@ -43,7 +45,9 @@
     let password = localStorage.getItem('password') ?? ''
 
     function onSubmit() {
-        localStorage.setItem('endpoint', endpoint)
+        if (import.meta.env.DEV) {
+            localStorage.setItem('endpoint', endpoint)
+        }
         localStorage.setItem('account', account)
         localStorage.setItem('password', password)
         location.reload()
