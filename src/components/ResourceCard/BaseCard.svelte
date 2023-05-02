@@ -1,7 +1,15 @@
+<svelte:head>
+    {@html atomOneDark}
+</svelte:head>
+
 <Card>
     <div class="w-full pr-16 border-box">
         {#if display_raw || !$$slots.content}
-        <pre class="overflow-x-scroll">{ JSON.stringify(data, null, 2) }</pre>
+        <Highlight
+            class="overflow-x-scroll"
+            language={json}
+            code={ JSON.stringify(data, null, 2) }
+        />
         {:else}
         <slot name="content"></slot>
         {/if}
@@ -31,6 +39,9 @@
 <script>
     import Card from '$components/UI/Card.svelte'
     import Icon from '@iconify/svelte'
+    import Highlight from 'svelte-highlight'
+    import json from 'svelte-highlight/languages/json'
+    import atomOneDark from 'svelte-highlight/styles/atom-one-dark'
 
     $: switch_text = display_raw ? 'Pretty' : 'Raw'
 
