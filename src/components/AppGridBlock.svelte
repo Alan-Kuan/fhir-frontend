@@ -3,18 +3,15 @@
       class="block
         m-1 py-2 rounded-xl text-center
         flex flex-col justify-center items-center
-        border border-solid border-gray-400
-        transition-colors duration-1000
-        bg-sky-200 hover:bg-primary"
+        transition-colors duration-500
+        bg-secondary hover:bg-primary"
     >
         <Icon
           icon={icon}
-          class="text-neutral text-8xl transition-colors duration-200"
+          class="text-8xl"
         />
         
-        <div
-          class="title text-neutral font-bold transition-colors duration-200"
-        >
+        <div class="title font-bold">
             {title}
         </div>
     </div>
@@ -28,10 +25,3 @@
     export let icon
     export let title
 </script>
-
-<style>
-    .block:hover :global(.icon),
-    .block:hover .title {
-        color: white;
-    }
-</style>
