@@ -1,4 +1,4 @@
-<div>
+<div class="pb-5">
     {#await get_resources}
         <div class="flex justify-center mt-10">
             <progress class="progress w-9/12" />

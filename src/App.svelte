@@ -7,11 +7,13 @@
         </Route>
         {/each}
     </div>
+    <Footer />
 </Router>
 
 <script>
     import { Router, Route } from 'svelte-navigator'
     import Header from '$components/Header.svelte'
+    import Footer from '$components/Footer.svelte'
     import HomeView from '$views/Home.svelte'
     import ResourceView from '$views/Resource.svelte'
     import MedicalRecordView from '$views/MedicalRecord.svelte'
