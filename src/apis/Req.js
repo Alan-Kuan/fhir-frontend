@@ -12,5 +12,6 @@ export default axios.create({
     auth: {
         username: localStorage.getItem('account'),
         password: localStorage.getItem('password')
-    }
+    },
+    timeout: 2000,
 })
