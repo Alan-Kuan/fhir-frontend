@@ -3,7 +3,7 @@
         <h1
           class="
             pt-12 leading-tight
-            text-black text-center text-8xl"
+            text-black text-center text-6xl"
         >
             { site_name }
         </h1>
