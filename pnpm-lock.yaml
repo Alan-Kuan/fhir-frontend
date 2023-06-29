@@ -1,6 +1,9 @@
 lockfileVersion: '6.0'
 
 dependencies:
+  '@azure/msal-browser':
+    specifier: ^2.37.1
+    version: 2.37.1
   axios:
     specifier: ^0.27.2
     version: 0.27.2
@@ -49,6 +52,18 @@ packages:
     resolution: {integrity: sha512-UrcABB+4bUrFABwbluTIBErXwvbsU/V7TZWfmbgJfbkwiBuziS9gxdODUyuiecfdGQ85jglMW6juS3+z5TsKLw==}
     engines: {node: '>=10'}
     dev: true
+
+  /@azure/msal-browser@2.37.1:
+    resolution: {integrity: sha512-EoKQISEpIY39Ru1OpWkeFZBcwp6Y0bG81bVmdyy4QJebPPDdVzfm62PSU0XFIRc3bqjZ4PBKBLMYLuo9NZYAow==}
+    engines: {node: '>=0.8.0'}
+    dependencies:
+      '@azure/msal-common': 13.1.0
+    dev: false
+
+  /@azure/msal-common@13.1.0:
+    resolution: {integrity: sha512-wj+ULrRB0HTuMmtrMjg8j3guCx32GE2BCPbsMCZkHgL1BZetC3o/Su5UJEQMX1HNc9CrIaQNx5WaKWHygYDe0g==}
+    engines: {node: '>=0.8.0'}
+    dev: false
 
   /@esbuild/android-arm@0.15.18:
     resolution: {integrity: sha512-5GT+kcs2WVGjVs7+boataCkO5Fg0y4kCjzkB5bAip7H4jfnOS3dA6KPiww9W1OEKTKeAcUVhdZGvgI65OXmUnw==}

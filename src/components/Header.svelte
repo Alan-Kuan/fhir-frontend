@@ -12,6 +12,9 @@
             w-3/4 mx-auto
             border-b-8 border-solid gradient-border"
         ></div>
+        <button on:click={login}>
+            login
+        </button>
     </header>
 {:else}
     <header
@@ -30,6 +33,7 @@
 
 <script>
     import { Link, useLocation } from 'svelte-navigator'
+    import { login } from '$apis/Auth.js'
     const site_name = import.meta.env.VITE_SITE_NAME
     const location = useLocation()
     $: is_home = $location.pathname === '/'
