@@ -1,6 +1,9 @@
 # FHIR Frontend
 A web application to demo FHIR Service
 
+## Screenshot
+![home page.jpg](https://github.com/Alan-Kuan/fhir-frontend/assets/24734750/55b9ead4-55dc-464b-b1fd-8fe3e7cab839)
+
 ## Docker
 ### Pull Docker Image
 This repository contains a GitHub Action workflow that deploys each release.
